@@ -8,24 +8,27 @@ The goal of the project is to facilitate migration of legacy PHP code to newer P
 
 Check out the project into your project directory by running ```git clone … phpcompat```. Include it in the beginning of your PHP code and call ```compat_ini_set``` function to emulate deprecated PHP configuration parameters.
 
+```php
     include_once 'phpcompat/main.php';
-    compat_ini_set('register_globals', TRUE);
-    compat_ini_set('register_long_arrays', TRUE);
+    compat_ini_set('register_globals');
+    compat_ini_set('register_long_arrays');
+```
 
-### compat_ini_set
+### compat_ini_set($varname, $newvalue = TRUE)
 
-```compat_ini_set``` function work similar to [ini_set](http://php.net/manual/en/function.ini-set.php) PHP function.
+compat_ini_set function works similar to [ini_set](http://php.net/manual/en/function.ini-set.php) PHP function. The second argument is optional and defaults to TRUE. It returns TRUE on successful call or FALSE if an error has occured.
 
 The following variables are currently supported:
+
 * register_globals
 * register_long_arrays
 
 ## Developers
 
-This is ambitious project and contributions are very welcome. Fork this repository, make changes and request a pull. Your code will be merged in the project as long as it conforms to the following requirements:
+This is ambitious project and contributions are very welcome. Fork this repository, make changes and request a pull. Your code will be merged in the project as long as it:
 
-* It covers backward incompatible change, deprecated feature or provides compatibility layer for functionality that is not supported by all SAPIs (e.g. php_* Apache directives).
-* It makes no assumptions. Check PHP version and existence of variable or function you are going to redeclare.
+* covers backward incompatible change, deprecated feature or provides compatibility layer for functionality that is not supported by all SAPIs (e.g. php_* Apache directives).
+* makes no assumptions. Always check PHP version and existence of variable or function you are going to redeclare.
 
 ## See also
 

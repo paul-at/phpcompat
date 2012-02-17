@@ -4,14 +4,17 @@
  * @param string $varname Name of the variable
  * @param mixed $newvalue Value to set
  */
-function compat_ini_set($varname, $newvalue) {
+function compat_ini_set($varname, $newvalue = TRUE) {
+	if(!$newvalue)
+		return;
+		
 	switch ($varname) {
 		case 'register_long_arrays':
-			if($newvalue)
-				compat_register_long_arrays();
+			compat_register_long_arrays();
+			return TRUE;
 		case 'register_globals':
-			if($newvalue)
-				compat_register_globals();
+			compat_register_globals();
+			return TRUE;
 		default:
 			return FALSE;
 	}
