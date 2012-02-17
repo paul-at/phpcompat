@@ -8,12 +8,16 @@ The project was founded to facilitate migration to PHP 5.3 and 5.4 and improve c
 
 ## Usage
 
-Check out the project into your project directory by running ```git clone … phpcompat```. Include it in the beginning of your PHP code and call ```compat_ini_set``` function to emulate deprecated PHP configuration parameters.
+1. Check out the project into your application directory.
+
+```https://github.com/paul-at/phpcompat```
+
+2. Include it in the beginning of your PHP code.
 
 ```php
-    include_once 'phpcompat/main.php';
-    compat_ini_set('register_globals');
-    compat_ini_set('register_long_arrays');
+include_once 'phpcompat/main.php';
+compat_ini_set('register_globals');
+compat_ini_set('register_long_arrays');
 ```
 
 ### compat_ini_set($varname, $newvalue = TRUE)
