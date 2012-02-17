@@ -4,7 +4,7 @@ This library provides a set of functions to emulate or replace functions and con
 
 The goal of the project is to facilitate migration of legacy PHP code to newer PHP versions.
 
-The project was founded to facilitate migration to PHP 5.3 and 5.4 and improve cross-SAPI portability, while maintaining compatibility with all PHP 5.x versions.
+The project was founded to help migration to PHP 5.3 and 5.4 and improve cross-SAPI portability, while maintaining compatibility with all PHP 5.x versions.
 
 ## Usage
 
