@@ -1,8 +1,10 @@
 # PHP Backwards Compatibility Library
 
-This library provides a set of functions to emulate or replace functions and configuration variables that were declared deprecated or dropped in PHP 5.3 onwards to provide backwards compatibility layer.
+This library provides a set of functions to emulate or replace functions and configuration variables that were declared deprecated or dropped to provide backwards compatibility layer.
 
 The goal of the project is to facilitate migration of legacy PHP code to newer PHP versions.
+
+The project was founded to facilitate migration to PHP 5.3 and 5.4 and improve cross-SAPI portability, while maintaining compatibility with all PHP 5.x versions.
 
 ## Usage
 
@@ -27,14 +29,14 @@ The following variables are currently supported:
 
 This is ambitious project and contributions are very welcome. Fork this repository, make changes and request a pull. Your code will be merged in the project as long as it:
 
-* covers backward incompatible change, deprecated feature or provides compatibility layer for functionality that is not supported by all SAPIs (e.g. php_* Apache directives).
-* makes no assumptions. Always check PHP version and existence of variable or function you are going to redeclare.
+* covers backward incompatible change, deprecated feature or provides compatibility layer for functionality that is not supported by all SAPIs (e.g. php_* Apache directives that have no runtime equivalent).
+* makes no assumptions. Always check existence of variable or function you are going to redeclare.
 
 ## See also
 
-If you look into migrating from PHP 4 to PHP 5, [PHP_Compat](http://pear.php.net/package/PHP_Compat/) PEAR module may present interest as well.
+If you are looking into migrating from PHP 4 to PHP 5, then [PHP_Compat](http://pear.php.net/package/PHP_Compat/) PEAR module may present interest as well.
 
-[Upgrade PHP](http://include-once.org/p/upgradephp/) project offers the reverse thing: compatibility library that allows to run newer code on older PHP servers.
+[Upgrade PHP](http://include-once.org/p/upgradephp/) does the opposite job, providing compatibility library that allows to run newer code on older PHP servers.
 
 ## Legal stuff
 
