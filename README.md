@@ -15,9 +15,11 @@ The project was founded to facilitate migration to PHP 5.3 and 5.4 and improve c
 2. Include it in the beginning of your PHP code.
 
 ```php
+<?php
 include_once 'phpcompat/main.php';
 compat_ini_set('register_globals');
 compat_ini_set('register_long_arrays');
+?>
 ```
 
 ### compat_ini_set($varname, $newvalue = TRUE)
