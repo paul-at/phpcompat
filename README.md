@@ -10,7 +10,7 @@ The project was founded to facilitate migration to PHP 5.3 and 5.4 and improve c
 
 1. Check out the project into your application directory.
 
-```git clone https://github.com/paul-at/phpcompat phpcompat```
+```sh git clone https://github.com/paul-at/phpcompat phpcompat```
 
 2. Include it in the beginning of your PHP code.
 
